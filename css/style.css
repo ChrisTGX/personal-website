@@ -13,7 +13,7 @@ html, body{
 /* My Cover Photo */
 .cv-photo{
   border-radius: 50%;
-  background: url('/public/cv_photo.png') center;
+  background: url('../public/cv_photo.png') center;
   background-size: contain;
 }
 
@@ -118,7 +118,7 @@ html, body{
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url('/public/bg-sky.jpeg');
+  background-image: url('../public/bg-sky.jpeg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -137,7 +137,7 @@ html, body{
   z-index: 0;
 }
 .bg-projects {
-  background-image: url('/public/bg-projects.jpeg');
+  background-image: url('../public/bg-projects.jpeg');
 }
 .section {
   position: relative;
@@ -146,7 +146,7 @@ html, body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  /*justify-content: center;*/
+  justify-content: center;
   color: white;
   text-shadow: 0 0 5px #000;
   background-color: #eee;
@@ -201,10 +201,10 @@ a:hover div.project-img {
   opacity: 0.7;
 }
 .project-img.img1 {
-  background-image: url('/public/uni-dept-home.png');
+  background-image: url('../public/uni-dept-home.png');
 }
 .project-img.img2 {
-  background-image: url('/public/car-park-detail.png');
+  background-image: url('../public/car-park-detail.png');
 }
 .project-card p {
   color: #444;
