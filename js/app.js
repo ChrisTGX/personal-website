@@ -41,8 +41,30 @@ $(function() {
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
-    } // End if
+    }
   })
+
+});
+
+var sections = $('.section')
+  , nav = $('.nav-row')
+  , nav_height = nav.outerHeight();
+ 
+$(window).on('scroll', function () {
+  var cur_pos = $(this).scrollTop();
+ 
+  sections.each(function() {
+    var top = $(this).offset().top - nav_height,
+        bottom = top + $(this).outerHeight();
+ 
+    if (cur_pos >= top && cur_pos <= bottom) {
+      nav.find('li').removeClass('active');
+      sections.removeClass('active');
+ 
+      // $(this).addClass('active');
+      nav.find('a[href="#'+$(this).attr('id')+'"]').parent().addClass('active');
+    }
+  });
 });
 
 // MODAL!!

@@ -6,6 +6,7 @@
     <meta author="Christian Teixeira">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Century+Gothic">
@@ -13,6 +14,23 @@
   </head>
   <body>
     <header>
+      <!-- Bootstrap Navbar 
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+          <h5 class="text-white h4">Collapsed content</h5>
+          <span class="text-muted">Toggleable via the navbar brand.</span>
+        </div>
+      </div>
+      <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+          aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav> 
+    
+      -->
+
+      <!-- Custom Nav-row -->
       <div class="nav-row">
         <div class="brand">
           <div class="brand-img cv-photo"></div>
@@ -49,7 +67,7 @@
 
     <!-- Div Work -->
     <div id="mywork" class="section static">
-      <h2>My Work and Education</h2>
+      <h2 class="section-title">My Work and Education</h2>
       <div>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -58,17 +76,20 @@
       cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
       proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
+      <div>
+        <a href="public/Teixeira_CV.pdf" class="section-link" target="_blank"><h3>Download my CV</h3></a>
+      </div>
     </div>
 
     <!-- Div Projects -->
     <div id="projects" class="section bg-fixed bg-projects">
       <div>
-      <h2>My Projects</h2>
+      <h2 class="section-title">My Projects</h2>
       </div>
       <div id="projects-container">
         <div class="project-card">
           <h3>PROCAFE</h3>
-          <a id="myImg" href="#">
+          <a id="myImg" href="https://github.com/ChrisTGX/PROCAFE" target="_blank">
             <div class="project-img img1"></div>
 
             <!-- The Modal -->
@@ -80,25 +101,70 @@
           </a>
           <p>Univerisity Department Administration System</p>
         </div>
+
         <div class="project-card">
           <h3>SAGE</h3>
-          <a href="">
+          <a href="https://github.com/ChrisTGX/SAGE" target="_blank">
             <div class="project-img img2"></div>
           </a>
           <p>Car Park Administration and Booking System</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+          <h3>Vue-Express Posts</h3>
+          <a href="https://github.com/ChrisTGX/fullstack_vue_express" target="_blank">
+            <div class="project-img img3"></div>
+          </a>
+          <p>Fullstack Vue-Express Posts Web page</p>
         </div>
       </div>
     </div>
 
     <!-- Div Contact -->
     <div id="contact" class="section static">
-      <h2>Contact Me</h2>
+      <h2 class="section-title">Contact Me</h2>
       <div class="form-container">
-        <form>
-          <label for="name">Name: <input id="name" type="text" name="name" required=""></label>
-          <label for="email">Email: <input id="email" type="email" name="email" required=""></label>
-          <label for="msg">Message: <input id="msg" type="text" name="msg" required=""></label>
-          <input id="btn" type="submit" name="btn" value="Submit">
+        <form id="contact-form">
+          <div class="form-row">
+            <div class="form-label">
+              <label for="name">* Name: </label>
+            </div>
+            <div class="form-input">
+              <input id="name" type="text" name="name" class="input-field" placeholder="Enter your name" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+              <div class="form-label">
+                <label for="org">Organisation: </label>
+              </div>
+              <div class="form-input">
+                <input id="org" type="text" name="org" class="input-field" placeholder="Name of your Organisation">
+              </div>
+            </div>
+
+          <div class="form-row">
+            <div class="form-label">
+              <label for="email">* Email: </label>
+            </div>
+            <div class="form-input">
+              <input id="email" type="email" name="email" class="input-field" placeholder="Enter your E-mail" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-label">
+              <label for="msg">* Message: </label>
+            </div>
+            <div class="form-input">
+              <!-- <input id="msg" type="text" name="msg" class="input-field" required> -->
+              <textarea id="msg" name="msg" class="input-field" style="height:50px;resize:vertical;" 
+                        form="contact-form" placeholder="Enter your message here..."></textarea>
+            </div>
+          </div>
+
+          <button id="submit" type="submit">Submit</button>
         </form>
       </div>
     </div>
@@ -115,6 +181,7 @@
     </div>
 
     <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
     <script src="js/app.js"></script>
   </body>
 </html>
