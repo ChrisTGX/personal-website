@@ -19,7 +19,7 @@ html, body{
 
 /* Navbar */
 .nav-row{
-  position: absolute;
+  position: fixed;
   padding: 10px 100px 10px 100px;
   background-color: transparent;
   display: flex;
@@ -67,7 +67,6 @@ html, body{
   color: white;
   margin-right: 5px;
   text-decoration: none;
-  /*border-radius: 5px;*/
   padding: 5px 20px;
   font-size: 15px;
 }
@@ -76,11 +75,9 @@ html, body{
 }
 .main-nav li a:hover{
   border-bottom: 2px solid #fff;
-  /*background: linear-gradient(0deg, rgba(150,150,150,0.5), rgba(200,200,200,0.5));*/
   transition: all 0.1s linear;
 }
 .scroller{
-  /*display: none;*/
   position: fixed;
   top: 50%;
   text-align: center;

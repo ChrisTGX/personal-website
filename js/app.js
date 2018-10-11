@@ -5,14 +5,17 @@ $(function() {
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
 
+    // Header changes on scrolling
+    if (scroll > 0) {
+      header.addClass('solid'); 
+    } else {
+      header.removeClass('solid');
+    }
+    // Scroller changes after Home section
     if (scroll >= $('#home').height()) {
-      header.addClass('solid');
-      header.css('position', 'fixed');
       scroller.css('opacity', '1');
       scroller.css('visibility', 'visible');
     } else {
-      header.removeClass('solid');
-      header.css('position', 'absolute');
       scroller.css('opacity', '0');
       scroller.css('visibility', 'hidden');
     }
@@ -33,7 +36,7 @@ $(function() {
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
-      }, 1000, function(){
+      }, 800, function(){
    
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
@@ -41,16 +44,6 @@ $(function() {
     } // End if
   })
 });
-// Smooth scrolling using native browser support
-// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-//   anchor.addEventListener('click', function (e) {
-//       e.preventDefault();
-
-//       document.querySelector(this.getAttribute('href')).scrollIntoView({
-//           behavior: 'smooth'
-//       });
-//   });
-// });
 
 // MODAL!!
 
